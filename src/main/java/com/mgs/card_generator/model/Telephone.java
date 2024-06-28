@@ -1,5 +1,7 @@
 package com.mgs.card_generator.model;
 
+import com.mgs.card_generator.dto.TelephoneInput;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
@@ -30,5 +32,12 @@ public class Telephone extends GeneralModel{
 
     public Telephone(Integer id) {
         super.setId(id);
+    }
+
+    public Telephone(TelephoneInput data) {
+        this.ddi = data.getDdi();
+        this.ddd = data.getDdd();
+        this.number = data.getNumero();
+        this.owner = new Employee(data.getIdDono());
     }
 }

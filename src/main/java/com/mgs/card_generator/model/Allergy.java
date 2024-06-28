@@ -2,6 +2,8 @@ package com.mgs.card_generator.model;
 
 import java.util.Set;
 
+import com.mgs.card_generator.dto.AllergyInput;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
@@ -28,5 +30,9 @@ public class Allergy extends GeneralModel{
 
   public Allergy(Integer id) {
     super.setId(id);
+  }
+
+  public Allergy(AllergyInput data) {
+    this.allergenic = data.getAlergenico();
   }
 }

@@ -2,6 +2,8 @@ package com.mgs.card_generator.model;
 
 import java.util.Set;
 
+import com.mgs.card_generator.dto.HealthProblemInput;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
@@ -31,5 +33,10 @@ public class HealthProblem extends GeneralModel{
 
   public HealthProblem(Integer id) {
     super.setId(id);
+  }
+
+  public HealthProblem(HealthProblemInput data) {
+    this.name = data.getNome();
+    this.description = data.getDescricao();
   }
 }

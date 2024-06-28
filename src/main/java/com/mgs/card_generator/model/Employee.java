@@ -2,6 +2,8 @@ package com.mgs.card_generator.model;
 
 import java.util.Set;
 
+import com.mgs.card_generator.dto.EmployeeInput;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToMany;
@@ -41,5 +43,11 @@ public class Employee extends GeneralModel{
 
   public Employee(Integer id) {
     super.setId(id);
+  }
+
+  public Employee(EmployeeInput data) {
+    this.name = data.getNome();
+    this.email = data.getEmail();
+    this.role = new Role(data.getIdCargo());
   }
 }

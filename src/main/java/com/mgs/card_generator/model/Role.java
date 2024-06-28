@@ -1,5 +1,7 @@
 package com.mgs.card_generator.model;
 
+import com.mgs.card_generator.dto.RoleInput;
+
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -18,5 +20,9 @@ public class Role extends GeneralModel{
 
   public Role(Integer id) {
     super.setId(id);
+  }
+
+  public Role(RoleInput data) {
+    this.name = data.getNome();
   }
 }
