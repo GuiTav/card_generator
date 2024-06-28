@@ -9,10 +9,10 @@ Criado para a conclusão da sistematização (Projeto A) da matéria de Programa
 ## Como instalar e executar
 - Clone o projeto localmente
 - Execute o banco de dados MYSQL
-- Abra o arquivo src\main\resources\application.properties
-- Edite os seguintes campos:
-  - spring.datasource.username (insira o nome do usuário do banco)
-  - spring.datasource.password (insira a senha do usuário do banco)
+- Abra a pasta do projeto e edite o arquivo src\main\resources\application.properties
+- Altere os seguintes campos:
+  - spring.datasource.username=<nome_do_usuario> (insira o nome do usuário do banco)
+  - spring.datasource.password=<senha_do_usuario> (insira a senha do usuário do banco)
 - Opcionalmente, é possível alterar o campo spring.datasource.url para utilizar um schema já existente (Ex: jdbc:mysql://localhost:3306/<nome_schema>), mas ele automaticamente deverá criar um schema por padrão
 - Acesse a pasta do projeto utilizando um terminal (como o Prompt de Comando do Windows ou shell do Linux)
 - Digite os seguintes comandos:
