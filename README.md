@@ -16,8 +16,12 @@ Criado para a conclusão da sistematização (Projeto A) da matéria de Programa
 - Opcionalmente, é possível alterar o campo spring.datasource.url para utilizar um schema já existente (Ex: jdbc:mysql://localhost:3306/<nome_schema>), mas ele automaticamente deverá criar um schema por padrão
 - Acesse a pasta do projeto utilizando um terminal (como o Prompt de Comando do Windows ou shell do Linux)
 - Digite os seguintes comandos:
-  - ./mvnw install
-  - ./mvnw spring-boot:run
+  - Para LINUX:
+    - ./mvnw install
+    - ./mvnw spring-boot:run
+  - Para WINDOWS:
+    - mvnw.cmd install
+    - mvnw.cmd spring-boot:run
 - Com isso feito, o projeto estará em execução em http://localhost:8080
 
 ## O que tem no projeto
